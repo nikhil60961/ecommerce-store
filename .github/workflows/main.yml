@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs:
+  build:
+    name: Build & push docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
